@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Clone</title>
+  <meta
+    name="description"
+    content="A portfolio landing page inspired by designtips.today, ready to customize."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="hero" id="top">
+      <nav class="topbar">
+        <a class="brand" href="#top">Portfolio</a>
+        <div class="nav-links">
+          <a href="#articles">Articles</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Inspired by designtips.today</p>
+          <h1>
+            我是 <span>你的名字</span>，一名注重审美与体验的
+            <span>设计师 / 开发者</span>。
+          </h1>
+          <p class="intro">
+            这个版本先把参考网站的气质和结构克隆下来：轻盈、克制、但又有记忆点。
+            下一步我们可以把这里完整替换成你的真实履历、项目、文章和社交链接。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">查看作品</a>
+            <a class="button ghost" href="#about">了解更多</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <img
+            src="https://framerusercontent.com/images/bJVV2Pp5vNeSuKKfosDUPG6xU4.png"
+            alt="Profile visual"
+          >
+          <div class="status-pill">Available for selected freelance work</div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section two-column" id="articles">
+        <div class="section-label">
+          <span>Articles</span>
+        </div>
+        <div class="section-content">
+          <div class="section-heading">
+            <h2>写作与表达</h2>
+            <p>保留参考站的内容节奏，用来展示你的文章、观察和设计思考。</p>
+          </div>
+          <div class="list-grid">
+            <a class="list-card" href="#">
+              <span class="card-index">01</span>
+              <div>
+                <h3>How I turn rough ideas into polished interfaces</h3>
+                <p>分享设计到落地的工作流、审美判断和交付方式。</p>
+              </div>
+            </a>
+            <a class="list-card" href="#">
+              <span class="card-index">02</span>
+              <div>
+                <h3>Notes on motion, spacing, and visual rhythm</h3>
+                <p>记录你对微动效、留白和信息密度的理解。</p>
+              </div>
+            </a>
+            <a class="list-card" href="#">
+              <span class="card-index">03</span>
+              <div>
+                <h3>Building products that feel thoughtful</h3>
+                <p>适合放产品设计、前端实现和用户体验相关的文章。</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column" id="projects">
+        <div class="section-label">
+          <span>Projects</span>
+        </div>
+        <div class="section-content">
+          <div class="section-heading">
+            <h2>精选项目</h2>
+            <p>参考站是单页叙事结构，这里先用卡片形式托住你的代表作。</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card featured">
+              <p class="project-tag">Case Study</p>
+              <h3>Portfolio System</h3>
+              <p>
+                一个为个人品牌打造的作品集系统，强调内容编排、视觉节奏与响应式体验。
+              </p>
+              <ul>
+                <li>Brand direction</li>
+                <li>Frontend craft</li>
+                <li>Interaction details</li>
+              </ul>
+            </article>
+            <article class="project-card">
+              <p class="project-tag">UI / UX</p>
+              <h3>Creator Dashboard</h3>
+              <p>面向内容创作者的数据看板，突出可读性与情绪化表达。</p>
+            </article>
+            <article class="project-card">
+              <p class="project-tag">Design Engineering</p>
+              <h3>Component Playground</h3>
+              <p>把设计 token、组件规范和前端实现统一在一个系统里。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-label">
+          <span>Experience</span>
+        </div>
+        <div class="section-content">
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-date">2025 - Present</p>
+              <div>
+                <h3>Senior Product Designer</h3>
+                <p>Company Name</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2023 - 2025</p>
+              <div>
+                <h3>Design Engineer</h3>
+                <p>Previous Studio</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2021 - 2023</p>
+              <div>
+                <h3>Frontend Designer</h3>
+                <p>Creative Team</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-label">
+          <span>Speaking</span>
+        </div>
+        <div class="section-content">
+          <div class="list-grid compact">
+            <a class="list-card" href="#">
+              <span class="card-index">01</span>
+              <div>
+                <h3>Designing with Systems</h3>
+                <p>Meetup / Conference</p>
+              </div>
+            </a>
+            <a class="list-card" href="#">
+              <span class="card-index">02</span>
+              <div>
+                <h3>From Figma to Frontend</h3>
+                <p>Workshop / Talk</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column" id="about">
+        <div class="section-label">
+          <span>Links</span>
+        </div>
+        <div class="section-content">
+          <div class="links-cloud">
+            <a href="#">Behance</a>
+            <a href="#">Dribbble</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">Newsletter</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-label">
+          <span>Hobbies</span>
+        </div>
+        <div class="section-content">
+          <div class="chip-grid">
+            <span>Photography</span>
+            <span>Coffee hopping</span>
+            <span>Travel</span>
+            <span>Running</span>
+            <span>Exhibition visits</span>
+            <span>Mountain climbing</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div class="section-label">
+          <span>Apps</span>
+        </div>
+        <div class="section-content">
+          <div class="app-grid" id="app-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>2026 • Local clone for your portfolio direction</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
