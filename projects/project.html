@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="项目详情">
+  <title>项目详情</title>
+  <link rel="stylesheet" href="./project-detail.css">
+</head>
+<body>
+  <header class="site-chrome" aria-label="站点导航">
+    <a class="site-brand" href="../index.html" aria-label="返回首页">
+      <img class="portrait" src="../assets/portrait.jpeg" alt="肖子淇">
+    </a>
+    <a class="site-work" href="../index.html">×</a>
+  </header>
+
+  <nav class="project-toc" id="project-toc" aria-label="项目目录"></nav>
+
+  <div class="project-scrollbar" id="project-scrollbar" aria-hidden="true">
+    <svg viewBox="0 0 32 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="project-scrollbar-track" d="M 16 6 V 194"></path>
+      <path class="project-scrollbar-thumb" id="project-scrollbar-thumb" d="M 16 6 V 26"></path>
+    </svg>
+  </div>
+
+  <main class="article-scroller" id="article-scroller">
+    <article class="project-article" id="project-article"></article>
+  </main>
+
+  <script src="./project-data.js"></script>
+  <script src="./project-detail.js"></script>
+</body>
+</html>

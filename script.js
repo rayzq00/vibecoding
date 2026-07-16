@@ -57,7 +57,7 @@ const views = {
   </a></div></section>`,
   projects: `<section class="state-panel"><h2>项目</h2>
   <p>本作品集收录了我于2024年至今参与的 AI 与企业级 SaaS 项目，通过用户研究、信息架构与交互设计，让复杂业务变得更清晰、更高效。</p>
-  <div class="state-list"><a href="#">财务智能体 Finmi Agent <span>查看 ↗</span>
+  <div class="state-list"><a href="./projects/project.html?id=finmi-agent">财务智能体 Finmi Agent <span>查看 ↗</span>
   </a><a href="#">快手HR 组织架构调整系统 <span>查看 ↗</span>
   </a><a href="#">百度智能云 Rocket MQ <span>查看 ↗</span> 
   </a><a href="#">简道云 AI小简助手 <span>查看 ↗</span>
