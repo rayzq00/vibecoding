@@ -56,12 +56,13 @@ a { text-decoration: none; }
 .app i { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; background: #f1f1f3; color: var(--subtle); font-style: normal; font-size: 13px; }
 .footer { padding-top: 24px; color: var(--subtle); font-size: 14px; }
 
-.state-panel { min-height: 534px; display: grid; align-content: start; gap: 24px; border-radius: 4px; padding: 36px; background: #f8f8f9; }
+.state-panel { min-height: 100%; display: grid; align-content: start; gap: 24px; border-radius: 4px; padding: 36px; background: #f8f8f9; }
 .state-panel h2 { margin: 0; font-family: var(--font-display); font-size: 32px; letter-spacing: -0.055em; }
-.state-panel p { max-width: 560px; margin: 0; color: var(--subtle); font-size: 18px; line-height: 1.5; }
+.state-panel p { max-width: 100%; margin: 0; color: var(--subtle); font-size: 18px; line-height: 1.5; }
 .state-list { display: grid; gap: 0; margin-top: 12px; border-top: 1px solid rgba(48,48,64,.12); }
-.state-list a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(48,48,64,.12); font-family: var(--font-display); font-weight: 700; }
+.state-list a { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(48,48,64,.12); font-family: var(--font-display); font-weight: 700; }
 .state-list a span { color: var(--subtle); font-family: var(--font-body); font-weight: 400; }
+.state-cover { width: 728px; max-width: 100%; height: auto; display: block; flex-basis: 100%; border-radius: 4px; }
 
 @media (max-width: 640px) {
   .page { gap: 44px; padding: 48px 24px; align-items: stretch; }
