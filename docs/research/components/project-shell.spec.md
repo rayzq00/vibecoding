@@ -12,7 +12,7 @@
 - Custom scrollbar: fixed right, vertically centered, 56x200px outer box with a 32x200px SVG. Track spans y=6 to y=194 with 6px round strokes; thumb length is proportional with a 20px minimum.
 - Home link: uses the portfolio's `assets/portrait.jpeg` portrait at 80x80px (72x72px mobile), fixed at x=96px so its left edge aligns with the table-of-contents links; clicking returns to `index.html`.
 - Narrow alignment: at 1042px and below, portrait x-position is `max(24px, (100vw - 880px) / 2 + 24px)`, matching the article title continuously through the centered-to-fluid transition.
-- Close link alignment: `a.site-work` keeps its right edge on the article text's right edge at every viewport using the same `max(24px, (100vw - 880px) / 2 + 24px)` inset.
+- Close link alignment: mirrors the portrait's responsive behavior. Above 1042px it sits 72px from the viewport's right edge; at 1042px and below it follows the article edge using `max(24px, (100vw - 880px) / 2 + 24px)`.
 - Close link typography: the `×` remains 36px at every viewport, including widths at and below 720px.
 - Left award badge: removed by user customization; no `W. / Nominee` overlay remains.
 - Scroll state: at article `scrollTop >= 36px`, the portrait transitions to 40x40px over 320ms; above the page threshold it restores its responsive base size.

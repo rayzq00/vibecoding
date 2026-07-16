@@ -51,16 +51,16 @@ const views = {
   about,
   articles: `<section class="state-panel"><h2>探索</h2>
   <p>收录了我在屏幕设计之外的长期创作与思考，包括文章、景观设计及绘画。这些经历让我持续保持对空间、秩序、美感与用户体验的观察，也塑造了我跨学科的设计思维。</p>
-  <div class="state-list"><a href="#">文章<span>查看 ↗</span>
-  </a><a href="#">景观设计 <span>查看 ↗</span>
-  </a><a href="#">绘画 <span>查看 ↗</span>
+  <div class="state-list"><a href="./projects/project.html?id=articles">文章<span>查看 ↗</span>
+  </a><a href="./projects/project.html?id=landscape-design">景观设计 <span>查看 ↗</span>
+  </a><a href="./projects/project.html?id=painting">绘画 <span>查看 ↗</span>
   </a></div></section>`,
   projects: `<section class="state-panel"><h2>项目</h2>
   <p>本作品集收录了我于2024年至今参与的 AI 与企业级 SaaS 项目，通过用户研究、信息架构与交互设计，让复杂业务变得更清晰、更高效。</p>
   <div class="state-list"><a href="./projects/project.html?id=finmi-agent">财务智能体 Finmi Agent <span>查看 ↗</span>
-  </a><a href="#">快手HR 组织架构调整系统 <span>查看 ↗</span>
-  </a><a href="#">百度智能云 Rocket MQ <span>查看 ↗</span> 
-  </a><a href="#">简道云 AI小简助手 <span>查看 ↗</span>
+  </a><a href="./projects/project.html?id=kuaishou-hr">快手HR 组织架构调整系统 <span>查看 ↗</span>
+  </a><a href="./projects/project.html?id=baidu-rocket-mq">百度智能云 Rocket MQ <span>查看 ↗</span> 
+  </a><a href="./projects/project.html?id=jiandaoyun-ai">简道云 AI小简助手 <span>查看 ↗</span>
   </a></div></section>`
 };
 
