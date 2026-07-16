@@ -1,97 +1,79 @@
 window.PROJECTS = {
   'finmi-agent': {
-    title: 'aDrive 阿里云盘',
-    date: 'Jan 07, 2022',
-    summary: '从零搭建阿里云盘设计系统，并参与其长期维护，支撑全端设计语言统一与设计组件复用。参与首页、各版本导航结构与启动器框架，以及影音播放器等业务设计；同时开发或协作开发设计系统文档工具 ADS 客户端与 Figma design token 导出工具。',
+    title: '面向快手财务的 FINMI Agent 设计',
+    date: 'Jan 2026 – Mar 2026',
+    summary: '在原有通用财务 AI「Finmi」基础上，设计面向财务重复性工作的 Agent 平台，让用户能够沉淀自己的 Prompt、Workflow 与 Tools，持续复用，而不仅仅是一次对话。',
     sections: [
       {
-        title: 'Teambition 网盘',
+        title: '项目总览',
         level: 1,
         content: [
-          { type: 'paragraph', text: 'Teambition 网盘是阿里云盘的前身。前期为了快速搭建并验证方向，我们选择在 Teambition 主产品内「生长」：底层天然具备协作能力，无论面向企业还是个人，都比从零起步更省力。设计侧同样如此，直接沿用成熟的 Clarity design，也无需再搭一套全新的设计系统。' },
-          { type: 'image', src: './assets/adrive/ad1.jpg', alt: '首页、传输列表、相册分享菜单', caption: '首页、传输列表、相册分享菜单' },
-          { type: 'image', src: './assets/adrive/ad2.jpg', alt: '文件预览、文件预览讨论圈点、视频弹幕圈点（概念）', caption: '文件预览、文件预览讨论圈点、视频弹幕圈点（概念）' },
-          { type: 'paragraph', text: '在获得外界与集团内部认可之后，我们决定把它做成独立的客户端，并争取到更充裕的研发资源；资源到位之后，也就有条件从零建立一套新的设计系统。' }
+        
+          { type: 'image', src: './assets/adrive/Finmi1.png', alt: '封面', caption: '封面' },
+          { type: 'image', src: './assets/adrive/Finmi2.png', alt: '项目总览', caption: '项目总览' },
+          { type: 'paragraph', text: '很多 AI 产品解决的是"回答问题"，但财务每天做的不是提问，而是重复执行一套固定流程。所以，我们真正想解决的问题不是让 AI 更聪明地回答问题，而是让 AI 能够沉淀一套工作流，帮助用户执行工作。' }
         ]
       },
       {
-        title: 'ADS | Adrive Design System',
-        level: 1,
-        content: []
-      },
-      {
-        title: 'ADS 架构',
+        title: '01 背景',
         level: 2,
         content: [
-          { type: 'paragraph', text: 'ADS 有两个驱动核心：一是设计目标，二是业务目标。我们刻意不把二者混为一谈——业务诉求本身并不会自动指向更好的用户体验。持续迭代、不断补全的设计目标，才是拉升体验的主轴；业务目标则负责在收益与体验之间拿捏分寸，避免过度设计。' },
-          { type: 'image', src: './assets/adrive/ad3.png', alt: 'ADS 架构' }
+        { type: 'paragraph', text: '原先的Finmi AI,用户已经可以通过自然语言完成信息检索、知识问答等任务。' },
+          { type: 'image', src: './assets/adrive/Finmi3.png', alt: '原有通用财务 AI', caption: '原有通用财务 AI'  }  
         ]
       },
       {
-        title: 'ADS 设计原则',
+        title: '02 现状',
         level: 2,
         content: [
-          { type: 'paragraph', text: '好的工作流能够显著提高团队效率；相较某些偏形而上的设计方法，它对组织而言往往更落地、也更容易推广。设计系统本质上就是设计、产品、工程有机融合的一条工作流，Figma 等工具协作可以帮助完成约 60% 的工作，其余部分要靠管理机制与各相关方达成共识来补齐。' }
+        { type: 'paragraph', text: '用每个用户已经形成了属于自己的 Workflow，却只能保存在脑子里或者 Excel 模板里，当前的通用对话型 AI 的记忆与一致性较弱，导致每一次都是重新开始。' },
+          { type: 'image', src: './assets/adrive/Finmi4.png', alt: '用户旅程图', caption: '用户旅程图' }  
         ]
       },
       {
-        title: '规范简洁',
-        level: 3,
-        content: [
-          { type: 'list', items: ['场景命名', '使用缩写', '层级清晰'] },
-          { type: 'image', src: './assets/adrive/ad4.png', alt: '规范简洁' }
-        ]
-      },
-      {
-        title: '高度复用',
-        level: 3,
-        content: [
-          { type: 'list', items: ['组件复用', '跨端一致性', '统一 Token 管理'] },
-          { type: 'image', src: './assets/adrive/ad5.png', alt: '高度复用' },
-          { type: 'image', src: './assets/adrive/ad6.png', alt: '高度复用' }
-        ]
-      },
-      {
-        title: '可持续性',
-        level: 3,
-        content: [
-          { type: 'list', items: ['反馈敏捷', '受控逃逸 / Escape hatch（允许在特殊情况下跨出设计系统的既定限制，避免机制僵化；并非鼓励随意破窗，而是为真实业务留出可控出口）'] },
-          { type: 'image', src: './assets/adrive/ad7.png', alt: '可持续性' }
-        ]
-      },
-      {
-        title: 'ADS 周边工具链',
+        title: '03 洞察',
         level: 2,
         content: [
-          { type: 'paragraph', text: 'ADS 客户端基于 Gatsby 与 Electron 开发，用于承载设计系统文档、组件演示与设计资源整合。对仅有 Figma 查看权限的同学，它还能把多条设计稿链接拼成一张「设计地图」。在团队语境里，大家默认：凡与云盘设计相关的内容，都会在 ADS 客户端里找到对应落点。' },
-          { type: 'paragraph', text: 'Fridge 也被纳入阿里云盘项目，用于把更完整的色板与 icon 实时同步给使用者。' },
-          { type: 'paragraph', text: 'Figma Time Line 是我们借助 Figma 的 Auto Layout「搭」出来的排期看板，全组的工作日程都通过它来对齐。' },
-          { type: 'image', src: './assets/adrive/ad8.png', alt: 'ADS 周边工具链' }
+        { type: 'paragraph', text: '真正需要被复用的，不是答案，而是 Workflow。' },
+          { type: 'image', src: './assets/adrive/Finmi5.png', alt: '三种命题', caption: '三种命题' }  
         ]
       },
       {
-        title: '阿里云盘设计概览',
-        level: 1,
-        divider: true,
+        title: '04 MVP',
+        level: 2,
         content: [
-          { type: 'image', src: './assets/adrive/ad9.jpg', alt: '阿里云盘设计概览' },
-          { type: 'paragraph', text: '阿里云盘在上线初期收获好评之后，为了在行业内做出差异化、参与竞争，团队探索了以「场景」为核心的个人云：用户不仅能把数字资产放进云盘，还能按不同使用场景在云盘内完成消费，而不必反复跳转到其他应用，从而形成「存—用」一体的个人数字资产闭环。' },
-          { type: 'image', src: './assets/adrive/ad10.jpg', alt: '滑动导航与启动器', caption: '滑动导航与启动器' },
-          { type: 'paragraph', text: '滑动导航是一次有趣的探索：我们希望单一导航栏仍能完整呈现「个人云」的能力版图，又不能牺牲可用性。这一方案在设计冲刺阶段我曾持保留态度，但在原型与可用性测试之后我改变了看法；我接手了与滑动导航相关的全部设计工作，并最终推动上线——日后有机会可以再单独展开当时的推演与取舍。' },
-          { type: 'image', src: './assets/adrive/ad11.jpg', alt: '多功能菜单、分享菜单', caption: '多功能菜单、分享菜单' },
-          { type: 'paragraph', text: '多功能菜单既贴合当代产品的操作习惯，又比层层模态与二级页面更轻、更快；相较传统的 Action sheet，它在布局与信息密度上也更自由。这也是许多优质 iOS 与 Android 应用正在采用的设计趋势之一。' },
-          { type: 'image', src: './assets/adrive/ad12.jpg', alt: '音频播放器、视频播放器、放映室', caption: '音频播放器、视频播放器、放映室' },
-          { type: 'image', src: './assets/adrive/ad13.jpg', alt: '占位符', caption: '占位符' },
-          { type: 'image', src: './assets/adrive/ad14.jpg', alt: '高度统一的桌面端', caption: '高度统一的桌面端' },
-          { type: 'paragraph', text: '最后，在阿里云盘与 Teambition 的这段经历非常充实：不仅让我的设计能力有了明显提升，也结识了许多一路互相促进的伙伴。' }
+        { type: 'paragraph', text: '如果 Agent 是一种能力，它应该如何进入产品？' },
+          { type: 'image', src: './assets/adrive/Finmi6.png', alt: 'MVP产品', caption: 'MVP产品' }  
         ]
-      }
+      },
+      {
+        title: '05 上线反转',
+        level: 2,
+        content: [
+        { type: 'paragraph', text: '我们设计了一个 Agent Marketplace，但用户并没有逛。' },
+          { type: 'image', src: './assets/adrive/Finmi7.png', alt: '埋点结果', caption: '埋点结果' }  
+        ]
+      },
+       {
+        title: '06 迭代2.0',
+        level: 2,
+        content: [
+        { type: 'paragraph', text: '从 Agent Marketplace 到 Personal Workspace。' },
+          { type: 'image', src: './assets/adrive/Finmi8.png', alt: '最终产品设计', caption: '最终产品设计' }  
+        ]
+      },
+        {
+        title: '07 反思',
+        level: 2,
+        content: [
+        { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
+          { type: 'image', src: './assets/adrive/Finmi9.png', alt: '结语', caption: '结语' }  
+        ]
+      },
     ],
     footerLinks: [
-      { label: 'Home', href: '../index.html' },
-      { label: 'Twitter/X', href: 'https://twitter.com/wenhaoqi' },
-      { label: 'GitHub', href: 'https://github.com/wenhaoqiasd' },
-      { label: 'Figma', href: 'https://www.figma.com/@wenhaoqi' }
+      { label: 'Figma设计稿链接', href: '../index.html' },
+      { label: '待添加链接', href: 'https:' },
     ]
   }
 };
