@@ -6,7 +6,7 @@ window.PROJECTS = {
     sections: [
       {
         title: '项目总览',
-        level: 1,
+        level: 2,
         content: [
         
           { type: 'image', src: './assets/adrive/Finmi1.png', alt: '封面', caption: '封面' },
@@ -16,7 +16,7 @@ window.PROJECTS = {
       },
       {
         title: '01 背景',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '原先的Finmi AI,用户已经可以通过自然语言完成信息检索、知识问答等任务。' },
           { type: 'image', src: './assets/adrive/Finmi3.png', alt: '原有通用财务 AI', caption: '原有通用财务 AI'  }  
@@ -24,7 +24,7 @@ window.PROJECTS = {
       },
       {
         title: '02 现状',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '用每个用户已经形成了属于自己的 Workflow，却只能保存在脑子里或者 Excel 模板里，当前的通用对话型 AI 的记忆与一致性较弱，导致每一次都是重新开始。' },
           { type: 'image', src: './assets/adrive/Finmi4.png', alt: '用户旅程图', caption: '用户旅程图' }  
@@ -32,7 +32,7 @@ window.PROJECTS = {
       },
       {
         title: '03 洞察',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '真正需要被复用的，不是答案，而是 Workflow。' },
           { type: 'image', src: './assets/adrive/Finmi5.png', alt: '三种命题', caption: '三种命题' }  
@@ -40,7 +40,7 @@ window.PROJECTS = {
       },
       {
         title: '04 MVP',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '如果 Agent 是一种能力，它应该如何进入产品？' },
           { type: 'image', src: './assets/adrive/Finmi6.png', alt: 'MVP产品', caption: 'MVP产品' }  
@@ -48,7 +48,7 @@ window.PROJECTS = {
       },
       {
         title: '05 上线反转',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '我们设计了一个 Agent Marketplace，但用户并没有逛。' },
           { type: 'image', src: './assets/adrive/Finmi7.png', alt: '埋点结果', caption: '埋点结果' }  
@@ -56,7 +56,7 @@ window.PROJECTS = {
       },
        {
         title: '06 迭代2.0',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '从 Agent Marketplace 到 Personal Workspace。' },
           { type: 'image', src: './assets/adrive/Finmi8.png', alt: '最终产品设计', caption: '最终产品设计' }  
@@ -64,7 +64,7 @@ window.PROJECTS = {
       },
         {
         title: '07 反思',
-        level: 2,
+        level: 3,
         content: [
         { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
           { type: 'image', src: './assets/adrive/Finmi9.png', alt: '结语', caption: '结语' }  
