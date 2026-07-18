@@ -98,40 +98,26 @@ window.PROJECTS['baidu-rocket-mq'] = {
         { type: 'image', src: './assets/adrive/MQ11.png', alt: '集群创建页首次上线版本', caption: '集群创建页首次上线版本' },
          { type: 'paragraph', text: '然而第一版MVP上线后，我们收集到的用户的反馈与埋点数据并不及预期，我们归结了问题致使的三个原因，并计划进行下一次快速迭代。' },
         { type: 'image', src: './assets/adrive/MQ12.png', alt: '上线数据', caption: '上线数据' },
-         { type: 'paragraph', text: '我们根据第一次上线数据归结了三个设计解决手段：①根据人脑记忆最多处理7(±2)项信息块的定律，将集群创建页面的原有两步拆分为三大步骤，避免用户信息过载；②在页面右上角加入目录，便于用户快速定位与便捷跳转；③实时保存与记忆，默认变更选项自动保存，再次进入时页面保留上一次未下单的所有选项。' },
+         { type: 'paragraph', text: '我们根据第一次上线数据归结了三个设计解决手段：' },
+         { type: 'list', items: ['根据人脑记忆最多处理7(±2)项信息块的定律，将集群创建页面的原有两步拆分为三大步骤，避免用户信息过载；', '在页面右上角加入目录，便于用户快速定位与便捷跳转；', '实时保存与记忆，默认变更选项自动保存，再次进入时页面保留上一次未下单的所有选项。'] },
         { type: 'image', src: './assets/adrive/MQ13.png', alt: '集群创建页第二次上线版本', caption: '群创建页第二次上线版本' }
       ]
     },
+   
     {
-      title: '服务开通页面',
+      title: '集群详情页面',
       level: 3,
       content: [
-        { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
-        { type: 'image', src: './assets/adrive/MQ12.png', alt: '结语', caption: '结语' }
-      ]
-    },
-    {
-      title: '服务开通页面',
-      level: 3,
-      content: [
-        { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
-        { type: 'image', src: './assets/adrive/MQ13.png', alt: '结语', caption: '结语' }
-      ]
-    },
-    {
-      title: '服务开通页面',
-      level: 3,
-      content: [
-        { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
-        { type: 'image', src: './assets/adrive/MQ14.png', alt: '结语', caption: '结语' }
+        { type: 'paragraph', text: '集群详情页面应确保信息查找的便捷性，并实现内容的层次化与深度展示。在第一版中采取了二次确认以及逐层递进的方式呈现信息。而二次迭代的时候添加了拓扑视图帮助用户更快更好理解集群架构' },
+        { type: 'image', src: './assets/adrive/MQ14.png', alt: '集群详情页迭代', caption: '集群详情页迭代' }
       ]
     },
        {
-      title: '服务开通页面',
+      title: '集群监控页面',
       level: 3,
       content: [
-        { type: 'paragraph', text: '这个项目最大的挑战，不是在设计一个聊天机器人，而是在重新定义一个企业产品的信息架构、入口逻辑、资产模型和工作流。' },
-        { type: 'image', src: './assets/adrive/MQ15.png', alt: '结语', caption: '结语' }
+        { type: 'paragraph', text: '由于紧急高优需求插入与团队人力有限，集群监控页面延期作为1.0.1推出的新功能，通过标签划分、自定义指标筛选、放大趋势图、报警等功能，满足用户四大需求场景：查看数据指标、感知异常数据、处理异常问题、观测业务资源，以快速应对异常情况。' },
+        { type: 'image', src: './assets/adrive/MQ15.png', alt: '集群监控页', caption: '集群监控页' }
       ]
     },
   ],

@@ -57,10 +57,15 @@ function renderProject(data) {
 
   const header = document.createElement('header');
   header.className = 'project-hero';
-  header.innerHTML = `<h1>${data.title}</h1><p class="project-date">${data.date}</p><div class="hero-line"></div><p class="project-summary">${data.summary}</p>`;
+  const summary = data.summary ? `<p class="project-summary">${data.summary}</p>` : '';
+  header.innerHTML = `<h1>${data.title}</h1><p class="project-date">${data.date}</p><div class="hero-line"></div>${summary}`;
   article.append(header);
 
-  data.sections.forEach((section, index) => {
+  (data.images || []).forEach((image) => {
+    article.append(renderBlock({ type: 'image', ...image }));
+  });
+
+  (data.sections || []).forEach((section, index) => {
     const id = slugify(section.title, index);
     const sectionElement = document.createElement('section');
     sectionElement.className = `project-section level-${section.level}`;
@@ -83,11 +88,13 @@ function renderProject(data) {
     toc.append(link);
   });
 
-  const footer = document.createElement('footer');
-  footer.className = 'project-footer';
-  const links = data.footerLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join('');
-  footer.innerHTML = `<div class="footer-links">${links}</div><p>Designed by XIAOZIQI · 2026</p>`;
-  article.append(footer);
+  if (data.footerLinks?.length) {
+    const footer = document.createElement('footer');
+    footer.className = 'project-footer';
+    const links = data.footerLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join('');
+    footer.innerHTML = `<div class="footer-links">${links}</div><p>Designed by XIAOZIQI · 2026</p>`;
+    article.append(footer);
+  }
 }
 
 function getScrollbarMetrics() {

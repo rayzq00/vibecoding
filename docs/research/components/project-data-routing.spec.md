@@ -19,6 +19,7 @@
 - Every file registers one independent object on `window.PROJECTS[id]`.
 - Each object owns `title`, `date`, `summary`, `sections`, and `footerLinks`.
 - Section content supports paragraph, list, and image blocks through the existing shared renderer.
+- Pure-image pages may omit `sections` and provide a top-level `images` array; images render directly below the hero without headings, captions, table-of-contents items, or footer links.
 - Placeholder files copy the current Finmi structure and assets so they can be edited independently.
 
 ## Link Contract
