@@ -57,8 +57,8 @@ window.PROJECTS['kuaishou-hr'] = {
    
   ],
   footerLinks: [
-    { label: 'Figma设计稿链接', href: '../index.html' },
-    { label: '待添加链接', href: 'https:' }
+    { label: 'Figma设计稿链接', href: 'https://www.figma.com/design/OEQx1KsnC3yn4GdVX17gW0/%E8%82%96%E5%AD%90%E6%B7%87-%C2%B7--2026--Design?node-id=3802-26853&t=cHpHKRHmTLsjGxDT-1' },
+   
   ]
 };
 

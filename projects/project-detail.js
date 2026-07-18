@@ -92,7 +92,7 @@ function renderProject(data) {
     const footer = document.createElement('footer');
     footer.className = 'project-footer';
     const links = data.footerLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join('');
-    footer.innerHTML = `<div class="footer-links">${links}</div><p>Designed by XIAOZIQI · 2026</p>`;
+    footer.innerHTML = `<div class="footer-links">${links}</div><p>Designed by XiaoZiqi · 2026 - 2024</p>`;
     article.append(footer);
   }
 }

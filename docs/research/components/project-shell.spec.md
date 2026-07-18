@@ -14,6 +14,7 @@
 - Narrow alignment: at 1042px and below, portrait x-position is `max(24px, (100vw - 880px) / 2 + 24px)`, matching the article title continuously through the centered-to-fluid transition.
 - Close link alignment: mirrors the portrait's responsive behavior. Above 1042px it sits 72px from the viewport's right edge; at 1042px and below it follows the article edge using `max(24px, (100vw - 880px) / 2 + 24px)`.
 - Close link typography: the `×` remains 36px at every viewport, including widths at and below 720px.
+- Typography: shares the homepage font roles. Display titles and emphasized links use `Space Grotesk` at weight 700; body copy, dates, lists, table of contents, captions, and footer metadata use `Satoshi` at weight 400.
 - Left award badge: removed by user customization; no `W. / Nominee` overlay remains.
 - Scroll state: at article `scrollTop >= 36px`, the portrait transitions to 40x40px over 320ms; above the page threshold it restores its responsive base size.
 - Article: width 100%, max-width 880px, margin auto, desktop padding `96px 24px`.
