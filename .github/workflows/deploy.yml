@@ -6,7 +6,8 @@ on:
       - main
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  contents: read
 
 concurrency:
   group: production
@@ -17,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Check out the deployment commit
+        uses: actions/checkout@v4
+
       - name: Deploy over SSH
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
@@ -35,11 +39,25 @@ jobs:
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/deploy_key" "$HOME/.ssh/known_hosts"
 
-          ssh \
-            -i "$HOME/.ssh/deploy_key" \
-            -o BatchMode=yes \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
-            deploy@"$DEPLOY_HOST" \
-            '/srv/vibecoding/source/scripts/deploy.sh'
+          release_id="$GITHUB_SHA"
+          tar --exclude=.git --exclude=.github -czf - . |
+            ssh \
+              -i "$HOME/.ssh/deploy_key" \
+              -o BatchMode=yes \
+              -o IdentitiesOnly=yes \
+              -o StrictHostKeyChecking=yes \
+              -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
+              deploy@"$DEPLOY_HOST" \
+              "set -e
+              release_root=/srv/vibecoding/releases
+              tmp=\"\$release_root/.${release_id}.tmp\"
+              final=\"\$release_root/${release_id}\"
+              rm -rf \"\$tmp\"
+              mkdir -p \"\$tmp\"
+              tar -xzf - -C \"\$tmp\"
+              if [[ ! -e \"\$final\" ]]; then
+                mv -- \"\$tmp\" \"\$final\"
+              else
+                rm -rf \"\$tmp\"
+              fi
+              DEPLOY_ROOT=/srv/vibecoding DEPLOY_RELEASE_DIR=\"\$final\" bash \"\$final/scripts/deploy.sh\""

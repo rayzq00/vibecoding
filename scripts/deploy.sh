@@ -8,44 +8,60 @@ releases_dir="$deploy_root/releases"
 current_link="$deploy_root/current"
 lock_path="$deploy_root/.deploy.lock"
 
-if [[ ! -d "$source_dir/.git" ]]; then
-  printf 'deployment source checkout is missing: %s\n' "$source_dir" >&2
-  exit 1
-fi
-
 mkdir -p "$releases_dir"
 exec 9>"$lock_path"
 if command -v flock >/dev/null 2>&1; then
   flock 9
 fi
 
-git -C "$source_dir" fetch --prune --no-tags origin "$deploy_branch"
-commit="$(git -C "$source_dir" rev-parse FETCH_HEAD)"
-release_dir="$releases_dir/$commit"
-
-if [[ ! -d "$release_dir" ]]; then
-  temporary_dir="$releases_dir/.${commit}.tmp.$$"
-  mkdir "$temporary_dir"
-  cleanup() {
-    if [[ -d "$temporary_dir" ]]; then
-      rm -rf -- "$temporary_dir"
-    fi
-  }
-  trap cleanup EXIT
-
-  git -C "$source_dir" archive "$commit" | tar -x -C "$temporary_dir"
-  if [[ ! -f "$temporary_dir/index.html" ]]; then
-    printf 'deployment commit has no index.html: %s\n' "$commit" >&2
+release_dir="${DEPLOY_RELEASE_DIR:-}"
+if [[ -n "$release_dir" ]]; then
+  case "$release_dir" in
+    "$releases_dir"/*) ;;
+    *)
+      printf 'uploaded release is outside the releases directory: %s\n' "$release_dir" >&2
+      exit 1
+      ;;
+  esac
+  if [[ ! -d "$release_dir" ]]; then
+    printf 'uploaded release is missing: %s\n' "$release_dir" >&2
     exit 1
   fi
-  mv -- "$temporary_dir" "$release_dir"
-  trap - EXIT
+else
+  if [[ ! -d "$source_dir/.git" ]]; then
+    printf 'deployment source checkout is missing: %s\n' "$source_dir" >&2
+    exit 1
+  fi
+
+  git -C "$source_dir" fetch --prune --no-tags origin "$deploy_branch"
+  commit="$(git -C "$source_dir" rev-parse FETCH_HEAD)"
+  release_dir="$releases_dir/$commit"
+
+  if [[ ! -d "$release_dir" ]]; then
+    temporary_dir="$releases_dir/.${commit}.tmp.$$"
+    mkdir "$temporary_dir"
+    cleanup() {
+      if [[ -d "$temporary_dir" ]]; then
+        rm -rf -- "$temporary_dir"
+      fi
+    }
+    trap cleanup EXIT
+
+    git -C "$source_dir" archive "$commit" | tar -x -C "$temporary_dir"
+    if [[ ! -f "$temporary_dir/index.html" ]]; then
+      printf 'deployment commit has no index.html: %s\n' "$commit" >&2
+      exit 1
+    fi
+    mv -- "$temporary_dir" "$release_dir"
+    trap - EXIT
+  fi
 fi
 
 if [[ ! -f "$release_dir/index.html" ]]; then
   printf 'release is missing index.html: %s\n' "$release_dir" >&2
   exit 1
 fi
+release_name="${release_dir##*/}"
 
 if mv --version >/dev/null 2>&1; then
   temporary_link="$deploy_root/.current.tmp.$$"
@@ -56,8 +72,8 @@ else
 fi
 
 release_dirs=()
-while IFS= read -r release_dir; do
-  [[ -n "$release_dir" ]] && release_dirs+=("${release_dir%/}")
+while IFS= read -r candidate; do
+  [[ -n "$candidate" ]] && release_dirs+=("${candidate%/}")
 done < <(ls -dt "$releases_dir"/*/ 2>/dev/null || true)
 if (( ${#release_dirs[@]} > 5 )); then
   for old_release in "${release_dirs[@]:5}"; do
@@ -65,4 +81,4 @@ if (( ${#release_dirs[@]} > 5 )); then
   done
 fi
 
-printf 'deployed %s to %s\n' "$commit" "$current_link"
+printf 'deployed %s to %s\n' "${commit:-$release_name}" "$current_link"
