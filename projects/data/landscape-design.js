@@ -9,7 +9,7 @@ window.PROJECTS['landscape-design'] = {
       level: 2,
       content: [
         { type: 'paragraph', text: '第九届花园杯“Garden”景观设计竞赛设计类二等奖' },
-        { type: 'image', src: './assets/adrive/花园杯.png' },
+        { type: 'image', src: './assets/adrive/花园杯.webp' },
        
         
       ]
@@ -19,12 +19,12 @@ window.PROJECTS['landscape-design'] = {
       level: 2,
       content: [
         
-        { type: 'image', src: './assets/adrive/HY2.png', },
-        { type: 'image', src: './assets/adrive/HY3.png', },
-        { type: 'image', src: './assets/adrive/HY11.png', },
+        { type: 'image', src: './assets/adrive/HY2.webp', },
+        { type: 'image', src: './assets/adrive/HY3.webp', },
+        { type: 'image', src: './assets/adrive/HY11.webp', },
        
-        { type: 'image', src: './assets/adrive/HY5.png', },
-        { type: 'image', src: './assets/adrive/HY6.png', },
+        { type: 'image', src: './assets/adrive/HY5.webp', },
+        { type: 'image', src: './assets/adrive/HY6.webp', },
         
         
       ]
@@ -34,8 +34,8 @@ window.PROJECTS['landscape-design'] = {
       level: 2,
       content: [
         
-        { type: 'image', src: './assets/adrive/HX1.png', },
-        { type: 'image', src: './assets/adrive/HX2.png', },
+        { type: 'image', src: './assets/adrive/HX1.webp', },
+        { type: 'image', src: './assets/adrive/HX2.webp', },
         
         
         
@@ -46,7 +46,7 @@ window.PROJECTS['landscape-design'] = {
       level: 2,
       content: [
         { type: 'paragraph', text: '“太湖湾”跨专业艺术设计创业大赛' },
-        { type: 'image', src: './assets/adrive/CP.png', }
+        { type: 'image', src: './assets/adrive/CP.webp', }
       ]
     },
   ],
