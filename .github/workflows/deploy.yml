@@ -16,7 +16,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Check out the deployment commit
         uses: actions/checkout@v4
@@ -61,7 +61,7 @@ jobs:
             mkdir -p \"$temporary_release\""
 
           rsync_options=(
-            -azc
+            -az
             --delete
             --exclude=.git/
             --exclude=.github/
