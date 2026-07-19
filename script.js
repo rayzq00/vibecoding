@@ -8,9 +8,9 @@ const coverSources = {
     './assets/4Cover.webp'
   ],
   articles: [
-    './assets/文章.png',
-    './assets/景观.png',
-    './assets/水光.png'
+    './assets/文章.webp',
+    './assets/景观.webp',
+    './assets/水光.webp'
   ]
 };
 
