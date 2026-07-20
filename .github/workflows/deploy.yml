@@ -16,7 +16,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 240
     steps:
       - name: Check out the deployment commit
         uses: actions/checkout@v4
