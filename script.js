@@ -2,10 +2,10 @@ const content = document.querySelector('#content');
 const controls = [...document.querySelectorAll('[data-view]')];
 const coverSources = {
   projects: [
-    './assets/1Cover.webp',
-    './assets/2Cover.webp',
-    './assets/3Cover.webp',
-    './assets/4Cover.webp'
+    './assets/1cover.webp',
+    './assets/2cover.webp',
+    './assets/3cover.webp',
+    './assets/4cover.webp'
   ],
   articles: [
     './assets/文章.webp',
